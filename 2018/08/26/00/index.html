@@ -5,18 +5,19 @@
   
 
   
-  <title>依璇Script</title>
+  <title>深入挖掘00截断 | 依璇Script</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="久别后的重逢最是甘美">
-<meta property="og:type" content="website">
-<meta property="og:title" content="依璇Script">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="暂无可预览内容">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入挖掘00截断">
+<meta property="og:url" content="http://yoursite.com/2018/08/26/00/index.html">
 <meta property="og:site_name" content="依璇Script">
-<meta property="og:description" content="久别后的重逢最是甘美">
+<meta property="og:description" content="暂无可预览内容">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-08-26T14:09:06.268Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="依璇Script">
-<meta name="twitter:description" content="久别后的重逢最是甘美">
+<meta name="twitter:title" content="深入挖掘00截断">
+<meta name="twitter:description" content="暂无可预览内容">
   
     <link rel="alternate" href="/atom.xml" title="依璇Script" type="application/atom+xml">
   
@@ -67,9 +68,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-00" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-00" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/26/00/" class="article-date">
   <time datetime="2018-08-26T14:08:49.479Z" itemprop="datePublished">2018-08-26</time>
@@ -86,8 +85,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/26/00/">深入挖掘00截断</a>
+    <h1 class="article-title" itemprop="name">
+      深入挖掘00截断
     </h1>
   
 
@@ -95,12 +94,28 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>暂无可预览内容<br>
-        
-          <p class="article-more-link">
-            <a href="/2018/08/26/00/#more">Read More</a>
-          </p>
-        
+        <p>暂无可预览内容<br>    <a id="more"></a></p>
+<h1 id="一-00截断版本"><a href="#一-00截断版本" class="headerlink" title="一.00截断版本"></a>一.00截断版本</h1><pre><code>在**php版本为5.3.4** 时全面修复了00截断导致的一系列问题。
+</code></pre><h1 id="二-常见误区"><a href="#二-常见误区" class="headerlink" title="二.常见误区"></a>二.常见误区</h1><pre><code>同解析漏洞一般，很多人认为是nginx自身的解析问题，实则是php中pathinfo导致的安全问题，00截断在大众认知中也存在一定的误区。
+</code></pre><h1 id="三-详解00截断"><a href="#三-详解00截断" class="headerlink" title="三.详解00截断"></a>三.详解00截断</h1><h2 id="00截断原理："><a href="#00截断原理：" class="headerlink" title="00截断原理："></a>00截断原理：</h2><pre><code>在某些编程语言中，%00会被认为是休止符，即本代码行执行到此结束，而在一些远古版本的PHP中，%00被认为是字符串的休止符，当php读取到%00的时候，会认为这是字符串的尾部。
+</code></pre><h2 id="00截断误区："><a href="#00截断误区：" class="headerlink" title="00截断误区："></a>00截断误区：</h2><pre><code>不bb 看下实例。
+
+查看我们的PHP版本                
+
+![image](https://www.qia.la/images/2018/08/26/xWDRy.png)
+
+
+写PHP 内容大概意思为校验后缀名是否为图片（png || jpg），不是的话上传失败，这个时候用大家印象中的00截断的用法来上传试试看
+![image](https://s1.ax1x.com/2018/08/26/PqCHtf.png)
+
+
+理所应当的失败了，因为00截断到php就没了，他检测到的文件后缀是PHP。
+</code></pre><h2 id="00截断正规姿势："><a href="#00截断正规姿势：" class="headerlink" title="00截断正规姿势："></a>00截断正规姿势：</h2><pre><code>            1.文件上传时目录可控 比如上传到C://web/upload/1.php%00 文件名随意，这样目录解析到1.php就结束了，上传的文件位置为C://web/upload/1.php500你随便输入的一个合法文件名 也就是成功上传了文件
+
+
+2.文件包含时 代码是这个样子的 include $path.$filename.&quot;txt&quot;
+此时利用00截断 内容为 include $path.&quot;1.php%00.txt&quot; 成功包含文件
+</code></pre>
       
     </div>
     <footer class="article-footer">
@@ -110,56 +125,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Dnslog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/08/23/Dnslog/" class="article-date">
-  <time datetime="2018-08-23T15:03:54.560Z" itemprop="datePublished">2018-08-23</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/默认分类/">默认分类</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/23/Dnslog/">让盲注不再盲目</a>
-    </h1>
+    <a href="/2018/08/23/Dnslog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">让盲注不再盲目</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>#前言：<br>    渗透测试的时候我们往往会遇到回显没有echo的情况 这个时候可以采取Dnslog的方式获得回显内容<br>
-        
-          <p class="article-more-link">
-            <a href="/2018/08/23/Dnslog/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/08/23/Dnslog/" data-id="cjl82fchp0000fk528s6l5c7x" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-
 
 </section>
         
